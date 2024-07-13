@@ -1,0 +1,48 @@
+/* ==================================
+table of contents 
+====================================
+
+1- Features Page 
+2- Features Icons
+3- Features Text
+
+
+*/
+
+/* ====================
+1- Features Page 
+======================= */
+
+.features {
+  padding: 0, 7rem;
+}
+
+/* ====================
+2- Features Icons
+======================= */
+
+.features .features__img {
+  width: 60px;
+}
+
+.features .features__item .features__img-wrapper {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.features .features__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+/* ====================
+3- Features Icons Text
+======================= */
+
+.features .features__flex .features__item .features__title {
+  color: var(--text-color);
+}

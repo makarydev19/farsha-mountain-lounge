@@ -1,0 +1,123 @@
+section.history {
+  /* background: url(../../assets/farshaimg2.jpg) center / cover fixed; */
+  position: relative;
+  /* width: 80%; */
+  margin: 0 auto;
+  /* border: red 1px solid; */
+}
+/* 
+section.history .shadow {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.377);
+} */
+
+section.history::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  width: 100%;
+  height: 100%;
+  background: var(--hsla);
+}
+
+section.history .section__title {
+  position: relative;
+  z-index: 1;
+}
+
+.history__item {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  align-items: center;
+  /* border: rebeccapurple solid 1px; */
+}
+
+.history__img-wrapper {
+  /* margin: 0 auto; */
+  margin-right: -4rem;
+}
+
+.history__content {
+  background-color: var(--container-color);
+  padding: 2.75rem 1rem;
+  position: relative;
+  border: 2px dashed var(--text-color);
+  margin: 0.25rem;
+}
+
+/* .history__content::before {
+  content: "";
+  position: absolute;
+  inset: 0.4rem;
+} */
+
+.history__img,
+.history__content,
+.history__content::before {
+  border-radius: var(--radius);
+}
+
+.history__title {
+  color: rgb(244, 85, 85);
+  font-size: var(--h2-font-size);
+  margin-bottom: 2.25rem;
+}
+
+.history__description {
+  max-height: 50vh;
+  overflow: auto;
+  margin-block: 0.5rem 1.5rem;
+  padding-right: 1px;
+  color: var(--text-color);
+}
+
+/* Change the color of the scrollbar */
+.history__description::-webkit-scrollbar {
+  width: 2px; /* Adjust as needed */
+}
+
+/* Track */
+.history__description::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.244); /* Adjust as needed */
+}
+
+/* Handle */
+.history__description::-webkit-scrollbar-thumb {
+  background: whitesmoke; /* Adjust as needed */
+}
+
+/* Handle on hover */
+.history__description::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Adjust as needed */
+}
+
+section.history .swiper-pagination {
+  position: initial;
+  margin-top: 2rem;
+}
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  border: 2px solid aliceblue;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--text-color);
+}
+
+.arrow-down {
+  font-size: 1.2rem;
+  margin-bottom: -0.2rem;
+  color: crimson;
+  margin-left: 0.2rem;
+  transition: 0.7s ease-in-out;
+}

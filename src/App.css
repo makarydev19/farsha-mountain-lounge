@@ -1,0 +1,275 @@
+/*=================================== 
+#GOOGLE FONTS 
+===================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Lobster+Two:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
+
+/*=================================== 
+#CSS VARIABLES
+===================================*/
+
+:root {
+  --header-height: 5rem;
+
+  /*===============
+   * Colors
+  ===============*/
+  --first-color: #f8f8ff;
+  --first-color-light: #f8f8ff;
+  --title-color: #ff5858;
+  /* --sec-color: #eba430; */
+  --text-color: #f8f8ff;
+  --bg-color: repeating-radial-gradient(
+      circle at center center,
+      transparent 0px,
+      transparent 11px,
+      rgba(255, 0, 0, 0.05) 11px,
+      rgba(255, 0, 0, 0.05) 19px,
+      transparent 19px,
+      transparent 29px,
+      rgba(255, 0, 0, 0.05) 29px,
+      rgba(255, 0, 0, 0.05) 33px
+    ),
+    repeating-radial-gradient(
+      circle at center center,
+      rgb(14, 14, 14) 0px,
+      rgb(14, 14, 14) 5px,
+      rgb(14, 14, 14) 5px,
+      rgb(14, 14, 14) 17px,
+      rgb(14, 14, 14) 17px,
+      rgb(14, 14, 14) 30px,
+      rgb(14, 14, 14) 30px,
+      rgb(14, 14, 14) 43px,
+      rgb(14, 14, 14) 43px,
+      rgb(14, 14, 14) 45px,
+      rgb(14, 14, 14) 45px,
+      rgb(14, 14, 14) 47px
+    );
+  --header-color: #0e0e0ee1;
+  --container-color: #0d1215;
+  --scroll-header-color: rgba(15, 15, 15, 0.767);
+  --hsla: hsla(0, 0%, 0%, 0);
+  --border: rgba(255, 255, 255, 0.064);
+  /*===============
+   * Typography
+  ===============*/
+
+  --body-font: cursive;
+  --second-font: "Lobster Two", cursive;
+  --guideline-font: cursive;
+  --biggest-font-size: clamp(2rem, 1.125rem + 4vw, 4.125rem);
+  --bigger-font-size: clamp(1.875rem, 1.3603rem + 2.3529vw, 3.125rem);
+  --big-font-size: clamp(1.75rem, 1.4412rem + 1.4118vw, 2.5rem);
+  --h1-font-size: 1.875rem;
+  --h2-font-size: 1.75rem;
+  --h3-font-size: 1.5rem;
+  --largest-font-size: 1.375rem;
+  --larger-font-size: 1.25rem;
+  --large-font-size: 1.125rem;
+  --normal-font-size: 1rem;
+
+  --weight-400: 400;
+  --weight-500: 500;
+  --weight-600: 600;
+  --weight-700: 700;
+
+  /*===============
+   * Border-radius
+  ===============*/
+
+  --radius: 0.5rem;
+
+  /*===============
+   * Transition
+  ===============*/
+
+  --transition: ease-in-out;
+}
+
+/*=================================== 
+#RESET
+===================================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input,
+textarea,
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  color: var(--text-color);
+  background: var(--bg-color);
+  background-size: 53px 53px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--second-font);
+  color: var(--title-color);
+  font-weight: var(--weight-400);
+}
+
+h4 {
+  font-family: "Lobster Two", cursive;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*=================================== 
+#RESUABLE CSS CLASSES
+===================================*/
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 0.75rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  color: var(--title-color);
+  background: var(--first-color);
+  border: 2px solid var(--first-color);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+}
+
+.btn:hover {
+  background-color: transparent;
+}
+
+.section {
+  padding-block: 5rem;
+}
+
+.section__title {
+  font-size: var(--big-font-size);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section__title::before {
+  content: attr(data-title);
+  display: block;
+  color: var(--first-color);
+  font-size: var(--h2-font-size);
+  font-family: var(--second-font);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.title-left {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.opacity {
+  opacity: 0.8;
+}
+
+/* ====================== */
+/* social icons */
+/* ====================== */
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+}
+
+.social-link {
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  border-radius: 50%;
+  color: rgb(222, 222, 222);
+  border: 2px solid rgb(162, 162, 162);
+  display: grid;
+  place-items: center;
+  transition: 0.2s var(--transition);
+}
+
+.social-link:hover {
+  background-color: var(--title-color);
+  border: 2px solid rgb(0, 0, 0);
+  color: #00041a;
+}
+
+/* horizontal-line */
+
+.H-Line hr {
+  height: 3rem;
+}
+
+.H-Line2 hr {
+  display: none;
+  height: 2.5rem;
+}
+
+/*scrollbar style*/
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.838);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 115, 115, 0.893);
+  border-radius: 5px;
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+
+.divider {
+  border-bottom: 2px solid var(--border);
+  margin: 3rem 0;
+}
+
+button {
+  text-decoration: none;
+  border: 0;
+}

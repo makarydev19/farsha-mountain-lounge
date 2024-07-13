@@ -1,0 +1,77 @@
+/* ==================================
+table of contents 
+====================================
+
+1- About Page 
+2- Left Section
+3- Right Section
+
+
+
+*/
+
+/* ====================
+1- About Page 
+======================= */
+
+section.about {
+  background-color: var(--background-color);
+  padding-bottom: 0;
+}
+
+section.about .about__grid {
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* ====================
+  2- Left Section 
+======================= */
+
+section.about .about__grid .about__img-wrapper {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+section.about .about__grid .about__img-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: -1.125rem;
+  left: 0;
+  background-color: rgb(211, 35, 35);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+section.about .about__grid .about__img-wrapper .about-img {
+  width: 100%;
+}
+
+/* ====================
+  3- Right Section 
+======================= */
+
+section.about .about__grid .about__content .about__details {
+  margin-block: 1.25rem 2.25rem;
+}
+
+section.about
+  .about__grid
+  .about__content
+  .about__details
+  .about__details-description {
+  display: flex;
+  align-items: center;
+}
+
+section.about .about__grid .about__content .about__details,
+section.about
+  .about__grid
+  .about__content
+  .about__details
+  .about__details-description {
+  gap: 0.625rem;
+}

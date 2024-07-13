@@ -1,0 +1,264 @@
+/* @media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .features__grid,
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__grid {
+    row-gap: 3rem;
+  }
+
+  .features__grid {
+    min-height: 90vh;
+  }
+} */
+
+@media screen and (max-width: 992px) {
+  :root {
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.375rem;
+    --h3-font-size: 1.25rem;
+    --largest-font-size: 1.25rem;
+    --larger-font-size: 1.125rem;
+    --large-font-size: 1rem;
+    --normal-font-size: 0.9375rem;
+  }
+
+  /* .home .title {
+    font-size: var(--biggest-font-size);
+    text-wrap: nowrap;
+  } */
+
+  .container {
+    max-width: 720px;
+  }
+
+  /* ====================
+    1- Header Design 
+======================= */
+
+  .header .nav {
+    height: var(--header-height);
+  }
+
+  .header .nav .nav__menu {
+    position: absolute;
+    top: 100%;
+    inset-inline: 0.75rem;
+    background-color: var(--header-color);
+    max-height: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    transition: 0.3s var(--transition);
+  }
+
+  .header .nav .show-menu {
+    z-index: 999;
+    max-height: 220px;
+  }
+
+  .header .nav .nav__menu .nav__list {
+    flex-direction: column;
+  }
+
+  .header .nav .nav__menu .nav__list .nav__item {
+    padding: 0.5rem 1.25rem;
+  }
+
+  .header .nav .nav__menu .nav__list .nav__item .nav__link {
+    color: aliceblue;
+  }
+
+  /* ==========================
+  * 2.Nav Toggle
+  ============================ */
+
+  .nav__toggle {
+    display: block;
+  }
+
+  /* ====================
+  1- About Page 
+  ===================== */
+
+  section.about .about__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .history__title {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  /* =======================
+    1- Features Page 
+
+  /* ========================
+    2- Features Icons
+  ========================== */
+  .features .features__flex {
+    display: grid;
+    place-items: center;
+    gap: 3rem;
+  }
+
+  .features .features__item .features__img-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ========================
+    3- Features Icons Text
+  ========================== */
+
+  .features .features__flex .features__item .features__title {
+    font-size: var(--h3-font-size);
+    padding: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+
+  section.history .history__item {
+    grid-template-columns: 1fr;
+  }
+
+  section.history .history__description {
+    max-height: 0;
+    overflow: hidden;
+    margin-bottom: 0;
+    transition: max-height 0.7s ease-in-out, opacity 0.5s ease-in-out;
+    padding-right: 0.75rem;
+    opacity: 0; /* Initially hide the text */
+  }
+
+  section.history .history__content:hover .arrow-down {
+    transform: rotate(-90deg);
+  }
+
+  .history__content:hover .history__description {
+    max-height: 20vh;
+    overflow-y: scroll;
+    opacity: 1; /* Fade in the text on hover */
+  }
+
+  .history__content {
+    z-index: 1;
+  }
+  .history__img {
+    /* transform: translateY(-320px); */
+    margin-top: -2rem;
+    vertical-align: middle;
+  }
+
+  .history__img-wrapper {
+    margin: 0;
+  }
+
+  section.footer .farshaLogo {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  :root {
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.375rem;
+    --h3-font-size: 1.25rem;
+    --largest-font-size: 1.25rem;
+    --larger-font-size: 1.125rem;
+    --large-font-size: 1rem;
+    --normal-font-size: 0.9375rem;
+  }
+
+  /* ====================
+  1- About Page 
+
+  /* ====================
+  2- Left Section 
+  ====================== */
+
+  section.about .about__grid .about__img-wrapper {
+    padding-left: 1rem;
+  }
+
+  section.about .about__grid .about__img-wrapper::before {
+    bottom: -0.625rem;
+  }
+  /* 
+  .social-link-title,
+  .social-link {
+    font-size: 
+  } */
+
+  /* .social-link {
+    width: 25px;
+    height: 25px;
+  } */
+
+  .H-Line2 hr {
+    display: block;
+  }
+
+  section.footer .farshaLogo {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  /* <=====================
+      3. Home videos
+   =======================> */
+
+  .home .swiper-slide-home .background .larg-screen {
+    display: none;
+  }
+
+  .home .swiper-slide-home .background .mobile-screen {
+    display: block;
+    object-fit: cover;
+  }
+
+  /* <=====================
+      4.Home Text
+  =======================> */
+
+  section.home .swiper-slide-home .title {
+    margin-top: 10rem;
+  }
+
+  section.home .swiper-slide-home .section__title {
+    font-size: var(--big-font-size);
+    text-align: center;
+    text-wrap: nowrap;
+  }
+
+  section.home .swiper-slide-home .subtitle {
+    font-size: var(--large-font-size);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  /* <=====================
+      4.Home Text
+  =======================> */
+
+  section.home .swiper-slide-home .section__title {
+    font-size: var(--h1-font-size);
+  }
+
+  section.home .swiper-slide-home .subtitle {
+    font-size: var(--normal-font-size);
+  }
+  .features__grid {
+    height: 150vh;
+  }
+}

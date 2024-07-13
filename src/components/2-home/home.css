@@ -1,0 +1,202 @@
+/* ==================================
+table of contents 
+====================================
+
+1- Home Buttons
+2- Home page
+3- Home Videos
+4- Home Text
+
+*/
+
+/* <=====================
+1.Home buttons
+=======================> */
+
+section.home .home-buttons {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  top: 82%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  backdrop-filter: blur(2rem);
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.205);
+}
+
+section.home .home-buttons button {
+  /* border: 2px rebeccapurple solid; */
+  margin: 0.5rem;
+  padding: 1.3rem 2.6rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+section.home .home-buttons .lounge {
+  background-image: url(../../assets/gallery-13.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section.home .home-buttons .beach {
+  background-image: url(../../assets/Beach3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section.home .home-buttons .Gallery {
+  background-image: url(../../assets/IMG_0251.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section.home .home-buttons .button {
+  opacity: 0.5;
+}
+
+section.home .home-buttons .button.active {
+  opacity: 1;
+}
+
+section.home .home-buttons .button.active .active {
+  border: rgb(255, 255, 255) 2px solid;
+}
+
+/* <=====================
+2.Home Page
+=======================> */
+
+section.home {
+  min-height: calc(110vh);
+  position: relative;
+}
+
+section.home .mySwiper-home {
+  /* border: 1px red solid; */
+  width: 100%;
+  height: 101vh;
+  margin-top: -5.5rem;
+  /* background: #000; */
+}
+
+section.home .swiper-slide-home {
+  /* border: 9px green solid; */
+  font-size: 18px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 100px 60px;
+}
+
+/* <=====================
+3. Home videos
+=======================> */
+
+section.home .swiper-slide-home .parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+section.home .swiper-slide-home .parallax-bg .mobile-screen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+section.home .swiper-slide-home .background {
+  height: 101vh;
+  width: 100%;
+}
+
+/* 
+section.home .swiper-slide-home .background .mobile-screen {
+  display: none;
+} */
+
+section.home .swiper-slide-home .background .large-screen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section.home .swiper-slide-home .background .overlay {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* <=====================
+  4.Home Text
+  =======================> */
+
+section.home .swiper-slide-home .section__title,
+section.home .swiper-slide-home .title {
+  font-size: var(--biggest-font-size);
+  font-family: var(--second-font);
+  font-weight: 300;
+  margin-top: 8rem;
+  text-align: center;
+  /* border: 2px red solid; */
+}
+
+section.home .swiper-slide-home .subtitle {
+  /* border: 2px red solid; */
+  font-size: var(--largest-font-size);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+section.home .swiper-slide-home .text {
+  /* border: 2px red solid; */
+  font-size: var(--largest-font-size);
+  /* max-width: 400px; */
+  line-height: 1.3;
+  text-align: center;
+}
+
+.bg-title {
+  position: relative;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+}
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-container .swiper-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.parallax-container .parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+}

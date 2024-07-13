@@ -1,0 +1,98 @@
+/* ==================================
+table of contents 
+====================================
+
+1- Header Design 
+2- Nav Toggle
+3- Scroll Header
+4- Active Link
+
+*/
+
+
+
+
+/* ====================
+1- Header Design 
+======================= */
+
+.header {
+  /* position: relative; */
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--header-color);
+  /* border: #d85b5b 2px solid; */
+}
+
+.header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 9999;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.header .nav .nav__logo-img {
+  width: 100px;
+}
+
+.header .nav .nav__menu .nav__list {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.header .nav .nav__menu .nav__link,
+.header .nav .nav__toggle {
+  color: aliceblue;
+}
+
+.header .nav .nav__menu .nav__link {
+  font-size: var(--large-font-size);
+  font-weight: var(--weight-500);
+  cursor: pointer;
+}
+
+
+/* ==========================
+  * 2.Nav Toggle
+  ============================ */
+
+
+.nav__toggle {
+  font-size: var(--h2-font-size);
+  display: none;
+  cursor: pointer;
+}
+
+/* ==========================
+  * 3.Scroll Header
+  ============================ */
+
+header.scroll-header {
+  position: fixed;
+  background-color: var(--header-color);
+  animation: slide-down 0.7s;
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ==========================
+  * 4.Active Link
+  ============================ */
+
+.active,
+.nav__link:hover {
+  color: var(--title-color) !important;
+}
+
