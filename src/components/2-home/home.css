@@ -124,10 +124,9 @@ section.home .swiper-slide-home .background {
   width: 100%;
 }
 
-/* 
 section.home .swiper-slide-home .background .mobile-screen {
   display: none;
-} */
+}
 
 section.home .swiper-slide-home .background .large-screen {
   width: 100%;

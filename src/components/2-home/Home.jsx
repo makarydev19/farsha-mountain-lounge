@@ -11,7 +11,6 @@ import loungeHori from "../../assets/LoungeHori.mp4";
 import galleryVertical from "../../assets/Gallery.mp4";
 import galleryHorizontal from "../../assets/GallaryHorizontal.mp4";
 import farshaBeach from "../../assets/FarshaBeachh.mp4";
-import farshaBeachMobile from "../../assets/beach2.mp4";
 
 import { Parallax, Pagination } from "swiper/modules";
 
@@ -130,13 +129,6 @@ const Home = () => {
           >
             <div className="background">
               <div className="overlay"></div>
-              <video
-                src={farshaBeachMobile}
-                autoPlay
-                loop
-                muted
-                className="mobile-screen"
-              ></video>
               <video
                 src={farshaBeach}
                 autoPlay
