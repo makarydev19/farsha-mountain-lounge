@@ -1,7 +1,5 @@
-'use client'
-
-import { TextAnimate } from '@/src/components/ui'
-import Image from 'next/image'
+import ReservationComp from "@/src/components/Reservation/ReservationComp"
+import Image from "next/image"
 
 const page = () => {
   return (
@@ -23,33 +21,8 @@ const page = () => {
 
           {/* Text */}
           <div className='absolute top-1/2 left-1/2 z-20 w-full -translate-x-1/2 -translate-y-1/2'>
-            <TextAnimate
-              className='font-milky text-center text-3xl font-bold text-blue-100 md:text-4xl'
-              animation='slideUp'
-              by='word'
-              duration={1}
-              delay={0.5}
-            >
-              Reservations
-            </TextAnimate>
-            <TextAnimate
-              animation='blurIn'
-              by='character'
-              duration={1}
-              delay={1}
-              className='font-milky text-center text-5xl text-nowrap text-blue-300 md:text-8xl'
-            >
-              Beach Lounge
-            </TextAnimate>
-            <TextAnimate
-              className='font-milky pb-4 text-center text-3xl font-bold text-blue-100 md:text-4xl'
-              animation='blurIn'
-              by='character'
-              duration={1}
-              delay={1.5}
-            >
-              Coming Soon
-            </TextAnimate>
+            <h1 className='text-center text-3xl font-bold mb-8'>Reserve Your Spot</h1>
+            <ReservationComp />
           </div>
         </div>
       </main>

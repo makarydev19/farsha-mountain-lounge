@@ -38,7 +38,12 @@ export type Field = {
     | 'number'
     | 'password'
     | 'rating'
+    | 'select'
   required?: boolean
+  options?: {
+    value: string
+    label: string
+  }[]
 }
 
 export type SignUpPayload = {

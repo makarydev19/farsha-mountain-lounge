@@ -14,6 +14,11 @@ export default defineConfig({
 
   plugins: [structureTool(), visionTool()],
 
+  acl: {
+    read: true,
+    write: true
+  },
+
   schema: {
     types: schemaTypes
   }

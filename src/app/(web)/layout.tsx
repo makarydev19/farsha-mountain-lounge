@@ -1,9 +1,9 @@
 import { NextAuthProvider } from '@/src/providers/AuthProvider'
-import Footer from '@/src/components/layout/Footer'
 import Header from '@/src/components/layout/Header'
+import Footer from '@/src/components/layout/Footer'
 import Toast from '@/src/components/Toast/Toast'
-import './globals.css'
 import ViewportHeightFix from '@/src/components/ViewportHeight/ViewportHeightFix'
+import './globals.css'
 
 export const metadata = {
   title: 'Farsha Mountain Lounge',
